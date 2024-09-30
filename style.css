@@ -1,0 +1,189 @@
+.body{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #eeeeee;
+}
+.main{
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #c9c9c9;
+	width: var(--mainSize);
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-color: white;
+	border-width: 6px;
+	border-style: outset;
+	border-radius: 2px;
+}
+.header {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	background-color: #c9c9c9;
+	width: var(--boardSize);
+	margin-bottom: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-color: white;
+	border-width: 6px;
+	border-style: inset;
+	border-radius: 2px;
+}		
+.board {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 0px auto;
+	border-color: white;
+	border-width: 6px;
+	border-style: inset;
+	border-radius: 2px;
+	box-sizing: content-box;
+}
+.board .tile {
+	background: url(minesweeper-sprites_9TPZzv3.png);
+	background-position: 0 -125px;
+	background-size: 342px;
+	width: var(--tileSize);
+	height: var(--tileSize);
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: calc(var(--tileSize) * .8);
+	cursor: pointer;
+	user-select: none;
+	font-family: Tahoma, sans-serif;
+}
+.board .tile--checked {
+	background: url(minesweeper-sprites_9TPZzv3.png);
+	background-position: var(--xAxis) var(--yAxis);
+	background-size: 338px;
+}
+.board .tile--checked:hover {
+	cursor: default;
+}
+.board .tile--bomb {
+	background: url(minesweeper-sprites_9TPZzv3.png);
+	background-position: -207px -124px;
+	background-size: 338px;
+	box-shadow: inset 0 2px 0 0 #fcfcfc, inset 2px 0 0 0 #fcfcfc, inset 0 -2px 0 0 #c9c9c9, inset -2px 0 0 0 #c9c9c9;
+}
+.board .tile--defused {
+	background: url(minesweeper-sprites_9TPZzv3.png);
+	background-position: -289px -124px;
+	background-size: 338px;
+	box-shadow: inset 0 2px 0 0 #fcfcfc, inset 2px 0 0 0 #fcfcfc, inset 0 -2px 0 0 #c9c9c9, inset -2px 0 0 0 #c9c9c9;
+}
+.board .tile--kaboom {
+	background: url(minesweeper-sprites_9TPZzv3.png);
+	background-position: -248px -124px;
+	background-size: 338px;
+	box-shadow: inset 0 2px 0 0 #fcfcfc, inset 2px 0 0 0 #fcfcfc, inset 0 -2px 0 0 #c9c9c9, inset -2px 0 0 0 #c9c9c9;
+}
+.board .tile--flagged {
+	background: url(minesweeper-sprites_9TPZzv3.png);
+	background-position: -82px -124px;
+	background-size: 338px;
+	box-shadow: inset 0 2px 0 0 #fcfcfc, inset 2px 0 0 0 #fcfcfc, inset 0 -2px 0 0 #c9c9c9, inset -2px 0 0 0 #c9c9c9;
+}
+.board .tile--marked {
+	background: url(minesweeper-sprites_9TPZzv3.png);
+	background-position: -124px -124px;
+	background-size: 338px;
+	box-shadow: inset 0 2px 0 0 #fcfcfc, inset 2px 0 0 0 #fcfcfc, inset 0 -2px 0 0 #c9c9c9, inset -2px 0 0 0 #c9c9c9;
+}
+.minesweeper-btn {
+	background: url(minesweeper-sprites_9TPZzv3.png);
+	background-position: var(--face) -62px;
+	background-size: 355px;
+	width: 67px;
+	height: 67px;
+    border: none;    
+	cursor: pointer;
+}
+.mines{
+	margin-right: 140px;
+	display: flex;
+}
+.mines-one{
+	background-image: url(minesweeper-sprites_9TPZzv3.png);
+	background-position: -320px 0px;
+	background-size: 355px;
+	height: 59px;
+	width: 36px;
+}
+.mines-two{
+	background: url(minesweeper-sprites_9TPZzv3.png);
+	background-position: var(--minesTwo) 0px;
+	background-size: 355px;
+	height: 59px;
+	width: 36px;
+}
+.mines-three{
+	background: url(minesweeper-sprites_9TPZzv3.png);
+	background-position: var(--minesOne) 0px;
+	background-size: 355px;
+	height: 59px;
+	width: 36px;
+}
+.timer{
+	margin-left: 140px;
+	display: flex;
+}
+.timer-one{
+	background: url(minesweeper-sprites_9TPZzv3.png);
+	background-position: var(--timerOne) 0px;
+	background-size: 355px;
+	height: 59px;
+	width: 36px;
+}
+.timer-two{
+	background: url(minesweeper-sprites_9TPZzv3.png);
+	background-position: var(--timerTwo) 0px;
+	background-size: 355px;
+	height: 59px;
+	width: 36px;
+}
+.timer-three{
+	background: url(minesweeper-sprites_9TPZzv3.png);
+	background-position: var(--timerThree) 0px;
+	background-size: 355px;
+	height: 59px;
+	width: 36px;
+}
+	
+@media screen and (max-width: 767px) {
+	.board-wrap {
+		transform: scale(0.8);
+		width: calc(100% + 160px);
+		left: -80px;
+		position: relative;
+	}
+}
+@media screen and (max-width: 520px) {
+	.board-wrap {
+		transform: scale(0.5);
+		width: calc(100% + 360px);
+		left: -180px;
+	}
+}	
+.endscreen {
+	background: #FFF;
+	padding: 20px;
+	text-align: center;
+	font-size: 40px;
+	display: none;
+	color: red;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+.endscreen.show {
+	display: block;
+}
+.endscreen span {
+	color: green;
+}	
